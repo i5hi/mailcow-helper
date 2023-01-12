@@ -26,3 +26,7 @@ docker compose up -d
 ```
 
 Once this is complete you can now access your mailcow admin panel at the provided hostname.
+
+# DNS
+
+You can now add Domains and you will be provided a list of DNS entries required to enable mail for that domain.
