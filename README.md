@@ -30,3 +30,22 @@ Once this is complete you can now access your mailcow admin panel at the provide
 # DNS
 
 You can now add Domains and you will be provided a list of DNS entries required to enable mail for that domain.
+
+# BACKUP
+
+Ensure that `THREADS` value is number of cores - 2, to allow mailcow to continue operating normally while a backup is being taken.
+
+```
+export THREADS=$(expr $(nproc) - 2)
+MAILCOW_BACKUP_LOCATION=/opt/backup /opt/mailcow-dockerized/helper-scripts/backup_and_restore.sh backup all
+```
+
+# RESTORE
+
+```
+./opt/mailcow-dockerized/helper-scripts/backup_and_restore.sh restore
+```
+
+# HELP
+
+https://docs.mailcow.email/
