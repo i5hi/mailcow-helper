@@ -13,7 +13,7 @@ There should already be an rDNS setting at your cloud provider for the IP of you
 
 Just change this to point to your domain name.
 
-# Config
+# CONFIG
 
 Inspect and modify (if required) the config file at `/opt/mailcow-dockerized/mailcow.conf`
 
