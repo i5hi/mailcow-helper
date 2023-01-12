@@ -22,9 +22,18 @@ sudo apt update
 sudo apt install docker-compose-plugin
 echo "[*] Installed dependencies!"
 
+su
 
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw allow 22,25,80,110,143,443,465,587,993,995,4190/tcp
-sudo ufw enable
+cd /opt
+
+git clone https://github.com/mailcow/mailcow-dockerized
+
+cd mailcow-dockerized
+
+./generate_config.sh
+
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22,25,80,110,143,443,465,587,993,995,4190/tcp
+ufw enable
 
