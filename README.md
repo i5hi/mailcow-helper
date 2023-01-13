@@ -42,7 +42,7 @@ You can set limits on a mailbox to ensure that users don't abuse space.
  
 You can also add aliases for a mailbox.
 
-#CLIENTS
+# CLIENTS
 
 A default SoGo groupware client is provided and hosted by mailcow-dockerized.
 
