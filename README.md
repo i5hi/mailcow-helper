@@ -6,8 +6,9 @@ Refer to init.sh
 
 Setting rDNS at your cloud provider. rDNS is just the reverse of DNS.
 
-Where DNS is DomainName->IP
-rDNS is IP->DomainName
+Where DNS is `DomainName->IP`
+
+rDNS is `IP->DomainName`
 
 There should already be an rDNS setting at your cloud provider for the IP of your server that points to their own service.
 
@@ -16,6 +17,8 @@ Just change this to point to your domain name.
 # CONFIG
 
 Inspect and modify (if required) the config file at `/opt/mailcow-dockerized/mailcow.conf`
+
+You can activate/deactivate various services like ClamAV/Fail2Ban etc. here.
 
 # START
 
@@ -30,6 +33,24 @@ Once this is complete you can now access your mailcow admin panel at the provide
 # DNS
 
 You can now add Domains and you will be provided a list of DNS entries required to enable mail for that domain.
+
+# MAILBOXES
+
+Once you have a domain setup you have to add mailboxes which are accounts per user.
+
+You can set limits on a mailbox to ensure that users don't abuse space.
+ 
+You can also add aliases for a mailbox.
+
+#CLIENTS
+
+A default SoGo groupware client is provided and hosted by mailcow-dockerized.
+
+We recommend using desktop and mobile native clients like:
+
+- Thunderbird
+- KMail
+- Geary
 
 # BACKUP
 
